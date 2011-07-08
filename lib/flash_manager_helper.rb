@@ -24,9 +24,9 @@ module FlashManagerHelper
     # CSS class for aligning flash inside sub layout.
     layout_flash_class = "sublayout_#{sublayout}_align" if sublayout
 
-    if flash[:notice]
+    if flash[:notice].present?
       flash_class = "success_flash"
-    elsif flash[:error]
+    elsif flash[:error].present?
       flash_class = "error_flash"
     end
 
